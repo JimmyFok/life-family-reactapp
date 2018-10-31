@@ -1,0 +1,67 @@
+.fa{
+    font-size:20px;
+    width:20px;
+    height:20px;
+}
+
+.Home-header{
+    background-color:#f29004; 
+    height: 44px;
+    font-size: 15px;
+    color: #fff;
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Home-banner{
+    height: 150px;
+    background-image: url('../assets/home-banner.png');
+    background-position: 50% 50%;
+    background-size: 100% auto;
+}
+
+.Home-lifefun{
+    padding: 0 12px;
+    height: 180px;
+    justify-content: space-between;    
+}
+
+.Home-lifefun-itembox{
+    float:left;
+    width: 33.3%;
+    height: 50%;
+    display: flex;
+    justify-content: stretch; 
+}
+
+.Home-lifefun-itembox:first-child{
+    height: 100%;
+    margin: 0;   
+}
+
+.Home-lifefun-itembox:nth-child(2), .Home-lifefun-itembox:nth-child(3){
+    padding: 0 0 8px 0  
+}
+
+.Home-lifefun-item{    
+    flex: 1;
+    height: 100%;
+    background-position: bottom left;
+    background-repeat: no-repeat;    
+    background-size: auto 50%; 
+    border-radius: 8px;  
+    margin: 8px 0 0 8px; 
+}
+
+.Home-lifefun-itembox:first-child .Home-lifefun-item{
+    background-size: 80% auto;
+    margin: 8px 0 0 0;
+    padding: 4px 0
+ }
+
+ .Home-lifefun-itembox:last-child .Home-lifefun-item{
+    background-size: 100% auto;
+ }
+
