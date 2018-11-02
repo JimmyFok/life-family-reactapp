@@ -1,33 +1,30 @@
 import React, { Component } from 'react';
-import '../css/Home.css';
-// import { url } from 'inspector';
+import '../assets/css/Home.css';
+import { Header, Area, Ad } from '../components' 
 
 const lifefunitems = [
-    { title: '精彩生活', subtitle: '会员专享' , img: require('../assets/home-fun-1.png'), color: ['#f29604','#e1a84a','#faeec4'] },
-    { title: '精彩生活', subtitle: '会员专享' , img: require('../assets/home-fun-2.png'), color: ['#2aad49','#79bb88','#d9f6e5'] },
-    { title: '精彩生活', subtitle: '会员专享' , img: require('../assets/home-fun-3.png'), color: ['#2ba6de','#82c6e5','#def2fb'] },
-    { title: '精彩生活', subtitle: '会员专享' , img: require('../assets/home-fun-4.png'), color: ['#f65b86','#ed91ab','#f9e0e7'] },
-    { title: '精彩生活', subtitle: '会员专享' , img: require('../assets/home-fun-5.png'), color: ['#ff7531','#fba575','#fbecdd'] },
+    { title: '精彩生活', subtitle: '会员专享' , img: require('../assets/img/home-fun-1.png'), color: ['#f29604','#e1a84a','#faeec4'] },
+    { title: '生活食品', subtitle: '为生活 添实惠' , img: require('../assets/img/home-fun-2.png'), color: ['#2aad49','#79bb88','#d9f6e5'] },
+    { title: '生活用品', subtitle: '为生活 更舒适' , img: require('../assets/img/home-fun-3.png'), color: ['#2ba6de','#82c6e5','#def2fb'] },
+    { title: '生活家居', subtitle: '为生活 享生活' , img: require('../assets/img/home-fun-4.png'), color: ['#f65b86','#ed91ab','#f9e0e7'] },
+    { title: '一键客服', subtitle: '为生活 更贴心' , img: require('../assets/img/home-fun-5.png'), color: ['#ff7531','#fba575','#fbecdd'] },
 ]
 
 class Home extends Component {
   render() {
     return (
       <div className="Home">
-        <header className="Home-header">
-            <span className="Home-header-city">广州<i className="fa fa-angle-down" aria-hidden="true"></i></span>
-            <h3 className="Home-header-title">生活一家</h3>
-            <div className="Home-header-search"><i className="fa fa-search" aria-hidden="true"></i></div>
-        </header>
+        <Header />
         <div className="Home-banner"></div>
         <div className="Home-lifefun">
             {lifefunitems.map((item,index)=><Fun item = {item} key={index}/>)}
         </div>
+        <Area/>
+        <Ad />
       </div>
     );
   }
 }
-
 
 class Fun extends Component{    
     render(){
@@ -38,13 +35,10 @@ class Fun extends Component{
             backgroundColor: item.color[2],           
         };
         const h3Style = {
-            color: item.color[0],
-            fontSize: "15px",
-            fontWeight: "normal"
+            color: item.color[0]         
         };
         const subStyle = {
-            color: item.color[1],
-            fontSize: "12px"
+            color: item.color[1]
         };
         return(
             <div className='Home-lifefun-itembox'>
