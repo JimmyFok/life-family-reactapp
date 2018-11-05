@@ -106,6 +106,30 @@
     padding: 8px;
     margin: 0;
     text-align: left;
+    background-color: #ffffff; 
  }
 
   /* Ad组件样式 End*/
+
+ /* Area组件样式 Start*/
+
+ .Home-area-title{
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 12px;
+ }
+
+ .Home-area-title > i{
+    flex: 1;   
+    border-bottom: 1px solid #dbdbdb;    
+ }
+
+ .Home-area-title > span{
+    padding: 0 12px;  
+    color: #808080;
+    font-size: 14px;
+ }
+
+  /* Area组件样式 End*/

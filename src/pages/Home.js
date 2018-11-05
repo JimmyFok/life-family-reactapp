@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../assets/css/Home.css';
-import { Header, Area, Ad } from '../components' 
+import { Header } from '../components' 
+import { Area } from '../containers' 
 
 const lifefunitems = [
     { title: '精彩生活', subtitle: '会员专享' , img: require('../assets/img/home-fun-1.png'), color: ['#f29604','#e1a84a','#faeec4'] },
@@ -10,17 +11,31 @@ const lifefunitems = [
     { title: '一键客服', subtitle: '为生活 更贴心' , img: require('../assets/img/home-fun-5.png'), color: ['#ff7531','#fba575','#fbecdd'] },
 ]
 
+const headStyle= {
+    position: "fixed",
+    left: 0,
+    right: 0,
+    top: 0,
+}
+
+const contentStyle= {
+    marginTop: 44
+}
+
 class Home extends Component {
   render() {
     return (
       <div className="Home">
-        <Header />
-        <div className="Home-banner"></div>
-        <div className="Home-lifefun">
-            {lifefunitems.map((item,index)=><Fun item = {item} key={index}/>)}
-        </div>
-        <Area/>
-        <Ad />
+        <div style={headStyle}>
+            <Header />
+        </div> 
+        <div className="Content" style={contentStyle}>
+            <div className="Home-banner"></div>
+            <div className="Home-lifefun">
+                {lifefunitems.map((item,index)=><Fun item = {item} key={index} />)}
+            </div>
+            <Area/>
+        </div>              
       </div>
     );
   }
