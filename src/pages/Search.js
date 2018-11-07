@@ -1,14 +1,37 @@
 import React,{Component} from 'react';
-import {Header} from '../components'
+import {Header, Distpicker} from '../components'
+import '../assets/css/Search.css'
 
-class Search extends Component{
-    render(){
+const headStyle= {
+    position: "fixed",
+    left: 0,
+    right: 0,
+    top: 0,
+}
+class Search extends Component{  
+
+    constructor(props){       
+        super(props)
+        this.state = {
+            point: ''
+        }
+    }
+
+    render(){   
         return(
             <div>
-                <Header></Header>
+                <div style={headStyle}>
+                    <Header sta={'1'}/>
+                </div> 
+                <div className="Search-at">                    
+                    <Distpicker point={this.state.point} />
+                    <div id="allmap"></div>
+                </div>                
             </div>
         )
     }
 }
+
+
 
 export default Search

@@ -3,7 +3,7 @@
  */
 
  import React from "react";
- import { BrowserRouter , 
+ import { BrowserRouter as Router, 
     Switch, 
     Route, 
     NavLink, 
@@ -21,11 +21,13 @@ const icon = {
     fontSize: 22
 }
 
-// const back = true
+const back = true
 
-// react-router v4 版本
-const HomeRouter = ()=> (
-    <div>
+ // 注意：路由的输出是函数才对。
+ export default ()=>{
+    return(
+            <Router>
+                <div>
                     {/* 底部切换栏 */}
                     <ul className="Home-bottom-tab">
                         <li>
@@ -63,25 +65,16 @@ const HomeRouter = ()=> (
                     <Switch>
                         <Route exact path="/" component={Home}/>
                         <Route path="/vip" component={Area}/>  
-                        <Route path="/search" component={Search}/>    
-                        {/* <Redirect to="/" />                                                               */}
+                        <Route path="/search" component={Search}/>                                                                  
                     </Switch>    
-                    
+                    <div>
+                        
+                    </div>
                            
-                </div>   
-)
-
- // 最后套到最上层
- const appRouter =()=>{
-    return(
-        <BrowserRouter>
-            <HomeRouter/>
-        </BrowserRouter>
-    )  
+                </div>                              
+            </Router>
+    )        
  }
-
- export default appRouter
-
  // 路由中不像vue-router那样，它不需要有route-view，而是任何都在Router里面。
 
 
