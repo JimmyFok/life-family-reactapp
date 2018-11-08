@@ -25,7 +25,7 @@ const icon = {
 
 // react-router v4 版本
 const HomeRouter = ()=> (
-    <div>
+    <div style={{paddingBottom: 49}}>
                     {/* 底部切换栏 */}
                     <ul className="Home-bottom-tab">
                         <li>

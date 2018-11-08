@@ -27,7 +27,7 @@ class Home extends Component {
     return (
       <div className="Home">
         <div style={headStyle}>
-            <Header/>
+            <Header title="生活一家"/>
         </div> 
         <div className="Content" style={contentStyle}>
             <div className="Home-banner"></div>

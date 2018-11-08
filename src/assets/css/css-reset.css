@@ -63,3 +63,40 @@ label{
 
 /* 这是防止Chrome的移动端滑动效果问题的方案2 */
 * { touch-action: pan-y; } 
+
+/* 超出2行省略号 */
+.ellipse2 {
+	word-break: break-all;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	overflow: hidden;
+  }
+
+  /* 超出1行省略号 必须限制宽度*/
+  .ellipse1 {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+  }
+  
+
+  /* 兼容性最好的省略号方式 */
+  .ellipse-new{
+	position: relative;
+	line-height: 16px; /* 行高 */
+	/* 3 times the line-height to show 3 lines */
+	height: 32px;  /* 行高*2 = 16*2 */
+	overflow: hidden;
+  } 
+
+  .ellipse-new::after{
+	content:"...";
+	background-color: #f8f8f8;  /* 字体所在底色 */
+	font-weight:bold;
+    position:absolute;
+    bottom:0;
+    right:0;
+    padding:0 9px 0px 2px;
+  }

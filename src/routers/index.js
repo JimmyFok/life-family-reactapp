@@ -12,7 +12,7 @@ import '../assets/css/css-reset.css'
 
 // import { } from '../pages';
 import { Area } from '../containers';
-import { Search, SharePages } from '../pages'
+import { Search, SharePages, Location } from '../pages'
 import HomeTab from './HomeTab'
 
 
@@ -23,6 +23,7 @@ const HomeRouter = ()=> (
             <Route exact path="/" component={HomeTab}/>
             <Route path="/vip" component={Area}/>  
             <Route path="/search" component={Search}/>
+            <Route path="/local" component={Location}/>
             <Route path="/share" component={SharePages}/>
         </Switch>   
     </div>   

@@ -1,19 +1,31 @@
 import React, { Component } from 'react'
 
-class Header extends Component {    
-    
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronLeft, faSearch } from '@fortawesome/free-solid-svg-icons'
+
+class Header extends Component {        
     render() {
-      // console.log(this.props.match)
-      // console.log(this.props.state)
+
+      const back = {
+        fontSize: 16,
+        paddingRight: 8
+      }
+
+      const search = {
+        fontSize: 16,
+      }
+      
       return (
         <header className="Home-header">
             {
               this.props.sta === "1"? 
-              <span>返回</span> :
+              <span><FontAwesomeIcon icon={faChevronLeft} style={back}/>返回</span> :
               <span className="Home-header-city">广州<i className="fa fa-angle-down" aria-hidden="true"></i></span>
             }            
-            <h3 className="Home-header-title">生活一家</h3>
-            <div className="Home-header-search"><i className="fa fa-search" aria-hidden="true"></i></div>
+            <h3 className="Home-header-title">{this.props.title}</h3>
+            <div className="Home-header-search">
+              {this.props.sta === "1"?"":<FontAwesomeIcon icon={faSearch} style={search}/>}
+            </div>
         </header>
       );
     }

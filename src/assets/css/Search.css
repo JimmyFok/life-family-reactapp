@@ -1,100 +1,69 @@
-
-.Search-container{
+.Search-goods{
+    padding-top: 44px;
+    height: 48px;
+    /* background-color: #f2f2f2  */
+    flex-direction: row;
     display: flex;
-    flex-direction: column;
-    position: absolute;
-    z-index: 1;
-    left: 0;
-    right: 0;
+    flex-direction: flex-start;
+    border-bottom: #e5e5e5 1px solid;
 }
 
-.Search-header{
-    flex-basis: 44px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-}
-    
-.Search-at{
-    font-size: 15px;
-    background-color: #e5e5e5; 
-    flex-grow: 1;    
-}
-
-.Search-at>div{
-    display: flex;
-    flex-direction: column;
-}
-
-.Search-at .present{
-    flex-basis: 76px;    
-}
-
-.Search-at h4{
-    line-height: 32px;
-    font-size: 14px;
-    text-align: left;
-    text-indent: 12px;
-    background-color: #e5e5e5; 
-}
-
-.Search-at li , .Search-at .chosed-list{
-    line-height: 44px;
-    font-size: 14px;
-    text-align: left;
-    text-indent: 12px;
-    background-color: #f2f2f2;    
-}
-
-.Search-at li{
+.Search-input{
+    border: 1px #e7e7e7 solid;
+    background-color: #ffffff;
+    margin: 8px;
+    line-height: 24px;
+    font-size: 20px;
+    height: 32px;
+    border-radius: 16px;    
+    flex-grow: 1;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 0 12px 0 0;
+    justify-content: flex-start;
+    padding: 0;
 }
 
-
-.Search-at .chosed{
-    background-color: #ffffff; 
-}
-
-.Search-at .chosed-list{
-    text-indent: 0
-}
-
-.city-list ul{
-    /* overflow: auto; */
-    padding-top: 152px;
-}
-
-.city-list h4{
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 120px;
-    z-index: 2;
-}
-
-.dis{
-    display: none;
-}
-
-.blo{
-    display: block;
-}
-
-.present{
-    position: fixed;
-    top: 44px;
-    left: 0;
-    right: 0;
-    z-index: 2;
-}
-
-.present ul{
+.good{
+    flex-grow: 1;
     display: flex;
     flex-direction: row;
-    background-color: #f2f2f2;
+    align-items: flex-start;
+    background-color: #f8f8f8;
+    border-bottom: #e5e5e5 1px solid;
+    padding: 8px 12px;
 }
- 
+
+.good img{
+    width: 64px;
+    height: 64px;
+    flex-shrink: 0;    
+}
+
+.good .msg {
+    flex-grow:1;
+    padding-left: 12px;   
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+}
+
+.good .msg h4{    
+    line-height: 16px;
+    font-size: 14px;
+    text-align: left;
+}
+
+.good .msg span{
+    color: #de0000;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: flex-start;
+    line-height: 28px;
+}
+
+.good .msg i{
+    font-size: 14px;
+}
+
+
