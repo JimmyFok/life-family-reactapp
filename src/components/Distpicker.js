@@ -10,7 +10,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
 
 /**
- * 来源: https://github.com/fengyuanchen/distpicker 中的distpicker中的最新数据
+ * 数据来源: https://github.com/fengyuanchen/distpicker 中的distpicker中的最新数据
  * date: 2018-11
  */
 var DISTRICTS = {
@@ -4123,6 +4123,7 @@ var DISTRICTS = {
 const provObj = DISTRICTS['100000'];
 
 // 2、省和编号倒过来
+// 定义对象反转key和value的函数
 const getObjRest = (obj) =>{    
     const provObjRest = {}
     Object.keys(obj).forEach(function(key){    
@@ -4132,6 +4133,7 @@ const getObjRest = (obj) =>{
     return provObjRest
 }
 const provObjRest = getObjRest(provObj)
+
 
 export default class AddReceive extends Component {
     constructor(props) {
@@ -4294,31 +4296,16 @@ export default class AddReceive extends Component {
 
     render() {
         let id = 0
-        const box = {
-            paddingTop: "44px",
-        }
-        const fixed = {
-            position: "fixed",
-            left: 0,
-            right: 0,
-            height: 76,
-            top: 44
-        }
-
-        const related = {
-            position: "relative",
-            top: 120,
-        }
         
         const obj2Arr =(obj) => {return Object.keys(obj)};
 
         return (
             <div>                
-                <div className="present" style={fixed}>   
+                <div className="present">   
                     <h4>当前位置</h4>                 
                     <ul className = "chosed-list">
                         <li onClick={this.handleChange.bind(this, "sheng")} value={this.state.province} className={this.state.province===""?"dis":""}>
-                            {DISTRICTS[100000][this.state.province]}
+                            {this.state.province===''?'正在定位中...':DISTRICTS[100000][this.state.province]}
                         </li>                        
                         <li onClick={this.handleChange.bind(this, "shi")} value={this.state.city} className={this.state.city===""?"dis":""}>
                             {this.state.cities[this.state.city]}
@@ -4328,7 +4315,7 @@ export default class AddReceive extends Component {
                         </li>
                     </ul>
                 </div>                               
-                <div className="city-list" style={related}>     
+                <div className="city-list">     
                     <h4>省市列表</h4>                
                     <ul className = {this.state.show[0]}>
                         {obj2Arr(this.state.provinces).map(province => (

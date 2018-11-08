@@ -2,12 +2,12 @@ import React,{Component} from 'react';
 import {Header, Distpicker} from '../components'
 import '../assets/css/Search.css'
 
-const headStyle= {
-    position: "fixed",
-    left: 0,
-    right: 0,
-    top: 0,
-}
+// const headStyle= {
+//     position: "fixed",
+//     left: 0,
+//     right: 0,
+//     top: 0,
+// }
 class Search extends Component{  
 
     constructor(props){       
@@ -19,8 +19,8 @@ class Search extends Component{
 
     render(){   
         return(
-            <div>
-                <div style={headStyle}>
+            <div className="Search-container">
+                <div className="Search-header">
                     <Header sta={'1'}/>
                 </div> 
                 <div className="Search-at">                    
