@@ -2,8 +2,10 @@
 
 import Home from './Home';
 import Search from './Search';
+import SharePages from './SharePages';
 
 export {
     Home,
-    Search
+    Search,
+    SharePages
 }

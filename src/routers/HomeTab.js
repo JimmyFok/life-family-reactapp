@@ -66,8 +66,6 @@ const HomeRouter = ()=> (
                         <Route path="/search" component={Search}/>    
                         {/* <Redirect to="/" />                                                               */}
                     </Switch>    
-                    
-                           
                 </div>   
 )
 

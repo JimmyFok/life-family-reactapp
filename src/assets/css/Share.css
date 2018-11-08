@@ -1,0 +1,59 @@
+.Share-container{
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column; 
+    align-items: stretch;
+}
+
+.Share-shadow{
+    flex-grow: 1;
+    background-color: rgba(0,0,0, 0.4)
+}
+
+.Share-content{
+    height: 240px;
+    background-color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.Share-buttons{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    align-self: stretch
+}
+
+.Share-button{
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+.Share-button img{
+    width: 48px;
+    height: 48px;
+    padding: 8px;
+}
+
+.Share-button span{
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.Share-cancel{
+    width: 320px;
+    height: 44px;
+    background-color: #cccccc;
+    color: #262626;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

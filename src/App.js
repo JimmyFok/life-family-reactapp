@@ -7,16 +7,16 @@ import Routers from './routers';
 class App extends Component {
 
   // // 禁止iOS手机的上下滑动
-  // componentDidMount(){
+  componentDidMount(){
+    // 必须增加{passive: false}才有效果
+    // document.querySelector('body').addEventListener('touchstart', function (event) {
+    //   event.preventDefault();
+    // },{passive: false});
+    // document.querySelector('body').addEventListener('touchmove', function (event) {
+    //   event.preventDefault();
+    // },{passive: false});
     
-  //   document.querySelector('body').addEventListener('touchstart', function (event) {
-  //     event.preventDefault();
-  //   });
-  //   document.querySelector('body').addEventListener('touchmove', function (event) {
-  //     event.preventDefault();
-  //   });
-    
-  // }
+  }
 
   render() {
     return (

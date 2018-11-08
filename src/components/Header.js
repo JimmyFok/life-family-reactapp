@@ -4,7 +4,7 @@ class Header extends Component {
     
     render() {
       // console.log(this.props.match)
-      console.log(this.props.state)
+      // console.log(this.props.state)
       return (
         <header className="Home-header">
             {

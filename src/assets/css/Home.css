@@ -5,6 +5,11 @@
     height:20px;
 }
 
+/* 增加超出滚动 */
+.Home{
+    overflow: auto;
+}
+
 .Home-header{
     background-color:#f29004; 
     height: 44px;
